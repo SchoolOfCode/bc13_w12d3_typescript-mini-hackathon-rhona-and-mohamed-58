@@ -1,13 +1,13 @@
 import React from 'react'
 
 type ButtonProps = {
-    onClick: () => void,
-    children: React.ReactNode; 
+  onClick: () => void,
+  text: string;
 }
 
 function Button(props: ButtonProps) {
   return (
-    <Button onClick={props.onClick}>{props.children}</Button>
+    <button onClick={props.onClick}>{props.text}</button>
   )
 }
 
