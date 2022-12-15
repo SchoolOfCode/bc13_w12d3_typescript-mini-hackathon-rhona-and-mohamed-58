@@ -8,8 +8,7 @@
   background: black;
   color: white;
   height: 100vh;
-  /* font-family: 'Rubik Vinyl', cursive; */
-  font-family: 'Zen Dots', cursive;
+  font-family: 'Zen Dots', sans-serif;
 }
 
 button{
