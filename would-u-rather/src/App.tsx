@@ -23,7 +23,7 @@ function App() {
       setQuestionData(data.data)
     }
     fetchQuestion()
-    splitQuestion(questionData)
+  
   }, [count])
 
   function splitQuestion(q:string):void {
@@ -38,17 +38,19 @@ function App() {
   function handleClick() {
     setCount(count + 1)
     console.log(count)
+    splitQuestion(questionData)
   }
 
   return (
-    <div>
+    <div className='App'>
       <h1>Would you rather...</h1>
-      <div>
-        <Button onClick={handleClick} text={option1} />
+      <div className='buttons'>
+
+        <Button className='option1' onClick={handleClick} text={option1} />
          OR 
-        <Button onClick={handleClick} text={option2} />
+        <Button className='option2' onClick={handleClick} text={option2} />
       </div>
-      <Button onClick={handleClick} text="New Question" />
+      <Button className="newQuestion" onClick={handleClick} text="New Question" />
 
     </div>
   );
