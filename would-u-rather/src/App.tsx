@@ -11,6 +11,9 @@ type Data = {
 function App() {
   const [questionData, setQuestionData] = useState("")
   const [count, setCount] = useState(0)
+  const [option1, setOption1] = useState('')
+  const [option2, setOption2] = useState('')
+
 
   useEffect(() => {
     async function fetchQuestion() {
@@ -20,7 +23,17 @@ function App() {
       setQuestionData(data.data)
     }
     fetchQuestion()
+    splitQuestion(questionData)
   }, [count])
+
+  function splitQuestion(q:string):void {
+    let arr = q.split(' or ')
+    let str1 = arr[0].replace("Would you rather ", '')
+    let str2 = arr[1].replace('?', '')
+    setOption1(str1)
+    setOption2(str2)
+  }
+
 
   function handleClick() {
     setCount(count + 1)
@@ -29,7 +42,12 @@ function App() {
 
   return (
     <div>
-      <h1>{questionData}</h1>
+      <h1>Would you rather...</h1>
+      <div>
+        <Button onClick={handleClick} text={option1} />
+         OR 
+        <Button onClick={handleClick} text={option2} />
+      </div>
       <Button onClick={handleClick} text="New Question" />
 
     </div>
