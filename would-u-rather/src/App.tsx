@@ -45,9 +45,8 @@ function App() {
     <div className='App'>
       <h1>Would you rather...</h1>
       <div className='buttons'>
-
         <Button className='option1' onClick={handleClick} text={option1} />
-         OR 
+         <span className='or'>OR</span> 
         <Button className='option2' onClick={handleClick} text={option2} />
       </div>
       <Button className="newQuestion" onClick={handleClick} text="New Question" />

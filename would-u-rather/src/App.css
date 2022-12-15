@@ -1,25 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Zen+Dots&display=swap');
 
 .App{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: black;
+  color: white;
+  height: 100vh;
+  /* font-family: 'Rubik Vinyl', cursive; */
+  font-family: 'Zen Dots', cursive;
 }
 
-.buttons{
-  
+button{
+  margin: 30px;  
 }
 
+h1 {
+  font-size: 70px;
+}
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
-/* CSS */
+.or {
+  font-size: 60px;
+
+}
+
 .option1,
 .option1:after {
-  width: 150px;
-  height: 76px;
+  min-width: 400px;
+  min-height: 400px;
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
   background: linear-gradient(45deg, transparent 5%, #0112ff 5%);
   border: 0;
   color: #fff;
@@ -40,7 +59,7 @@
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
   
-  content: 'ALTERNATE TEXT';
+  content: 'ARE YOU SURE?';
   display: block;
   position: absolute;
   top: 0;
@@ -118,11 +137,12 @@
 /* CSS */
 .option2,
 .option2:after {
-  width: 150px;
-  height: 76px;
+  min-width: 400px;
+  min-height: 400px;
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
+  font-weight: bold;
   background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
   border: 0;
   color: #fff;
@@ -143,7 +163,7 @@
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
   
-  content: 'ALTERNATE TEXT';
+  content: 'ARE YOU SURE?';
   display: block;
   position: absolute;
   top: 0;
