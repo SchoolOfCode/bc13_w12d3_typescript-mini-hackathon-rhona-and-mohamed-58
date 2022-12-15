@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Button from './components/Button';
-// import useFetch from './hooks/useFetch';
 
 type Data = {
   id: number,
@@ -18,7 +17,7 @@ function App() {
   useEffect(() => {
     async function fetchQuestion() {
       const res = await fetch('https://would-you-rather-api.abaanshanid.repl.co/')
-      const data = await res.json()
+      const data:Data = await res.json()
       console.log(data)
       setQuestionData(data.data)
     }
